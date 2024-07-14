@@ -2,7 +2,7 @@
 
 function cubeNumber(input) {
     if (typeof input == 'number' && input<=0) {
-        return 'please add meaningfull number';
+        return 'please add positive number';
     }
     return input **3;
 }
