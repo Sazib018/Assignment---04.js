@@ -1,21 +1,23 @@
 // Task problem - 5 ::::
 
 function canPay(array , number) {
-    let total = [];
-
-    for (let i = 0; i < array.length; i++) {
-       total += array[i];
-       array <= number;
-       return true
-        
+    if (array.length === 0) {
+        return 'please do not use empty array'
     }
-    if (number < array) {
-        return false  
+    else{
+        let totalTaka = 0;
+        for (let i = 0; i < array.length; i++) {
+            const taka = array[i];
+            totalTaka = taka + totalTaka;
+        }
+        if (totalTaka === number || totalTaka > number) {
+            return true
+        }
+        else{
+            return false
+        }
     }
-    return 'please check your array element'
-    
 }
-const noteArray = [1, 2, 5];
-const sumNote = 10;
-const totalCase = canPay(noteArray , sumNote);
-console.log(totalCase);
+
+const peramiter  = canPay ([1,5,5],10);
+console.log(peramiter);
