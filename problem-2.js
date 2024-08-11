@@ -1,16 +1,21 @@
 // Task Problem - 2 ::::
 
 function matchFinder(string1 , string2) {
- const caseString1 = string1.toLowerCase();
- const caseString2 = string2.toLowerCase();
- return caseString1.includes(caseString2);
+    if (typeof(string1) !== 'string' || typeof(string2) !== 'string') {
+        return 'please add string'
+    }
+    else if (string1.includes(string2) === true) {
+        return true
+    }
+    else{
+        return false
+    }
 }
+console.log(matchFinder("John Doe", "ohn"));
+console.log(matchFinder("Javascript", "code"));
+console.log(matchFinder("Peter Parker", 5));
 
-const words1 = matchFinder("John Doe", "ohn");
-const words2 = matchFinder("Javascript", "code");
-const words3 = matchFinder("Peter Parker", "pen");
-const words4 = matchFinder("Peter Parker", "pet");
-/* console.log(words1); */
+
 
 
 
